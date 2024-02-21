@@ -7,26 +7,11 @@ public class GroceryBagMain {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        double totalPrice = 0;
-
-        String[] itemTypes =  {
-                "pears",
-                "apples",
-                "tomatoes",
-                "bananas",
-                "eggplants",
-        };
-
-        // price per item in TL
-        double[] pricePerItem = {
-                2.14,
-                3.67,
-                1.11,
-                0.95,
-                5.00
-        };
+        String[] itemTypes =  { "pears", "apples", "tomatoes", "bananas", "eggplants" };
+        double[] pricePerItem = { 2.14, 3.67, 1.11, 0.95, 5.00 };
 
         int[] itemCounts = new int[itemTypes.length];
+        double totalPrice = 0;
 
         // ask item count for each item
         for (int i = 0; i < itemTypes.length; i++) {
@@ -44,9 +29,3 @@ public class GroceryBagMain {
         System.out.println("------------------------");
     }
 }
-
-//Armut : 2,14 TL
-//Elma : 3,67 TL
-//Domates : 1,11 TL
-//Muz: 0,95 TL
-//Patlıcan : 5,00 TL
