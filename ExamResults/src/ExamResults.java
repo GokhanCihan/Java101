@@ -22,10 +22,12 @@ public class ExamResults {
         for (int i = 0; i < courses.length; i++) {
             System.out.println("Add your exam result for " + courses[i] + ":");
             results[i] = input.nextDouble();
+            if (results[i] < 0 || results[i] > 100)
+                results[i] = 0;
         }
 
         for (double result : results) {
-            sum += result;
+
         }
 
         semesterAverage = sum / results.length;
