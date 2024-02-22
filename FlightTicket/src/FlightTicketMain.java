@@ -9,7 +9,7 @@ public class FlightTicketMain {
 
         int distance, age, travelType;
         double totalPrice;
-        double PRICE_PER_KM = 0.10;
+        final double PRICE_PER_KM = 0.10;
 
         System.out.print("Distance in km: ");
         distance = input.nextInt();
