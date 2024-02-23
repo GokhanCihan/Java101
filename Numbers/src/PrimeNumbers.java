@@ -7,14 +7,14 @@ public class PrimeNumbers {
         boolean isDividable = false;
 
 
-    NEXT_NUMBER: for (int number = 2; number < 100; number++ ) {
-                    for (int divisor = 2; divisor < number; divisor++) {
-                        if (number % divisor == 0) {
-                            isDividable = true;
-                            continue NEXT_NUMBER;
-                        }
-                    }
-                    System.out.print(number + " ");
-                    }
+        NEXT_NUMBER: for (int number = 2; number < 100; number++ ) {
+            for (int divisor = 2; divisor < number; divisor++) {
+                if (number % divisor == 0) {
+                    isDividable = true;
+                    continue NEXT_NUMBER;
+                }
+            }
+            System.out.print(number + " ");
+        }
     }
     }
