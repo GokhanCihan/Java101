@@ -8,8 +8,8 @@ public class MinMaxFinder {
         Scanner input = new Scanner(System.in);
 
         int min, max, givenNumber, numberCount;
-        min = 0;
-        max = 0;
+        min = Integer.MAX_VALUE;
+        max = Integer.MIN_VALUE;
 
         // ask user the count of numbers to be provided
         System.out.print("How many numbers you want to provide? ");
