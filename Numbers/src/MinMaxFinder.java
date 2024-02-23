@@ -22,7 +22,8 @@ public class MinMaxFinder {
             // compare input to min and max number
             if (givenNumber >= max) {
                 max = givenNumber;
-            }else {
+            }
+            if (givenNumber <= min) {
                 min = givenNumber;
             }
         }
