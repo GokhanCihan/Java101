@@ -1,4 +1,4 @@
-// Find users Chinese horoscope using year of birth
+// Find users Western horoscope using your month of birth and day of birth
 
 import  java.util.Scanner;
 
