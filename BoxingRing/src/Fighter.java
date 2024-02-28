@@ -3,14 +3,14 @@ public class Fighter {
     int weight;
     int damage;
     int health;
-    double dodge;
+    double chance;
 
-    public Fighter(String name, int weight, int damage, int health, double dodge) {
+    public Fighter(String name, int weight, int damage, int health, double chance) {
         this.name = name;
         this.damage = damage;
         this.health = health;
         this.weight = weight;
-        this.dodge = dodge;
+        this.chance = chance;
     }
 
     // Fix: no dodge?
@@ -31,6 +31,10 @@ public class Fighter {
 
     private boolean dodge() {
         double randomValue = Math.random() * 100;
-        return randomValue <= this.dodge;
+        return randomValue <= this.chance;
+    }
+
+    public void setChance() {
+        this.chance = Math.random() * 100;
     }
 }

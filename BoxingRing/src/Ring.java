@@ -13,19 +13,7 @@ public class Ring {
 
     public void startFight() {
         if (isCompatible()) {
-            while (fighter1.health > 0 && fighter2.health > 0) {
-                System.out.println("======== NEW ROUND ===========");
-                fighter2.health = fighter1.hit(fighter2);
-                if (didWin()) {
-                    break;
-                }
-                fighter1.health = fighter2.hit(fighter1);
-                if (didWin()) {
-                    break;
-                }
-                printScore();
-            }
-
+            move(fighter1, fighter2);
         } else {
             System.out.println("Boxers are not in the same weight category!");
         }
@@ -51,5 +39,33 @@ public class Ring {
         }
 
         return false;
+    }
+
+    private void move(Fighter fighter1, Fighter fighter2) {
+        Fighter firstMover, secondMover;
+
+        while (fighter1.health > 0 && fighter2.health > 0) {
+            System.out.println("======== NEW ROUND ===========");
+            fighter1.setChance();
+            fighter2.setChance();
+
+            if (fighter1.chance >= fighter2.chance) {
+                firstMover = fighter1;
+                secondMover = fighter2;
+            } else {
+                firstMover = fighter2;
+                secondMover = fighter1;
+            }
+
+            firstMover.health = secondMover.hit(firstMover);
+            if (didWin()) {
+                break;
+            }
+            secondMover.health = firstMover.hit(secondMover);
+            if (didWin()) {
+                break;
+            }
+            printScore();
+        }
     }
 }
