@@ -6,7 +6,10 @@ public class Transpose {
                 {2, 3, 4},
                 {5, 6, 4}
         };
+        System.out.println("Matrix: ");
+        System.out.println(Arrays.deepToString(matrix));
 
+        System.out.println("Transpose: ");
         printTranspose(matrix);
     }
 
