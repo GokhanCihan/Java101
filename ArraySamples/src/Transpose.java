@@ -13,8 +13,10 @@ public class Transpose {
     static void printTranspose(int[][] matrix){
         int rows = matrix.length;
         int columns = matrix[0].length;
+        // reverse column and row counts
         int[][] transpose = new int[columns][rows];
 
+        // get elements in the matrix one by one and assign to new array
         for (int row = 0; row < rows; row++) {
             for (int column = 0; column < columns; column++) {
                 transpose[column][row] = matrix[row][column];
