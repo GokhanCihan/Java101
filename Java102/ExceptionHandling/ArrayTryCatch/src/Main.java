@@ -24,8 +24,6 @@ public class Main {
         if(index < 0 || index > 9){
             throw new ArrayIndexOutOfBoundsException("value of the index should be between 0 and 9 (inclusive)");
         }
-
-
         return arr[index];
     }
 }
