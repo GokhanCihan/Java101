@@ -1,18 +1,6 @@
-package product;
-
 public class Phone extends Product{
-    private final int id;
-    private static int phoneID = 0;
     private int battery;
     private String color;
-    public Phone() {
-        phoneID++;
-        this.id = phoneID;
-    }
-
-    public int getId() {
-        return id;
-    }
 
     public int getBattery() {
         return battery;
